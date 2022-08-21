@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite + TS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/select/dist/css/nice-select2.css" />
+</head>
+
+<body>
+  <script src="/select/dist/js/nice-select2.js"></script>
+  <script src="/select/init.js"></script>
+
+  <div class="card">
+    <h3 class="card__heading">PEDRO'S WEEKLY GOAL</h3>
+
+    <div class="progress">
+      <div class="progress__circle">
+
+        <div class="progress__circleGraph"></div>
+        <span>Current</span>
+
+        <span class="progress__currentTime">38m</span>
+        <span class="progress__timeLimit">50m</span>
+      </div>
+
+      <div class="progress__details">
+        <p class="progress__minutesLeft">
+          <strong>12</strong> more mins. to achieve this week's Goal.
+        </p>
+
+        <div class="progress__streakInfo">
+          <div class="streakBox streakBox--currentStreak">
+            <strong>4</strong>
+            <span>Current Streak</span>
+          </div>
+
+          <div class="streakBox streakBox--bestStreak">
+            <strong>12</strong>
+            <span>Current Streak</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="leaderboard">
+      <div class="leaderboard__header">
+        <h4 class="leaderboard__heading">LEADERBOARD</h4>
+
+        <select class="leaderboard__select">
+          <option value="week" selected>Week</option>
+          <option value="month">Month</option>
+        </select>
+      </div>
+
+      <div class="leaderboard__userlist"></div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
+
+</body>
+
+</html>
