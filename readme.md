@@ -1,3 +1,5 @@
-186 more mins - błąd
+`yarn` to install dependencies.
 
-Use `yarn dev` to run app locally.
+`yarn dev` to run locally
+
+`yarn build` to build for production
