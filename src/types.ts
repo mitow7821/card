@@ -20,4 +20,17 @@ interface CardData {
 
 type SelectData = Record<SelectValue, CardData>;
 
-export type { SelectValue, User, CardData, SelectData };
+interface ReplaceDataItem {
+  value: keyof CardData;
+  selector: string;
+  suffix?: string;
+}
+
+export type {
+  SelectValue,
+  User,
+  CardData,
+  SelectData,
+  ReplaceDataItem,
+  UserStatus,
+};

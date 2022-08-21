@@ -1,7 +1,9 @@
 import "./reset.css";
 import "./style.scss";
-import useSelect from "./useSelect";
+import useSelect from "./helpers/useSelect";
 
 document.addEventListener("DOMContentLoaded", () => {
-  useSelect();
+  const { handleSelectChange } = useSelect();
+
+  handleSelectChange("week");
 });

@@ -1,5 +1,5 @@
-import type { SelectData, SelectValue } from "./types";
-import { changeCardData } from "./useCard";
+import type { SelectData, SelectValue } from "../types";
+import { changeCardData } from "./dataPresentation";
 
 const selectData: SelectData = {
   week: {
@@ -25,7 +25,7 @@ const selectData: SelectData = {
   month: {
     timeLimit: 50,
     currentTime: 12,
-    timeLeft: 38,
+    timeLeft: 186,
     currentStreak: 7,
     bestStreak: 44,
     leaderboard: [
@@ -43,7 +43,7 @@ const selectData: SelectData = {
   },
 };
 
-function handleSelectChange(selectValue: SelectValue) {
+function handleSelectChange(selectValue: SelectValue): void {
   const dataToDisplay = selectData[selectValue];
 
   changeCardData(dataToDisplay);
@@ -57,6 +57,6 @@ export default () => {
 
     handleSelectChange(selectValue);
   });
-};
 
-handleSelectChange("week");
+  return { handleSelectChange };
+};
